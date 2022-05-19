@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <button @click="number--">-</button>
+    {{ number }}
+    <button @click="number++">+</button>
+</div>
+
+
+<script src="https://unpkg.com/vue@3"></script>
+
+<script>
+    const {createApp} = Vue;
+    const app = createApp({
+        data() {
+            return {
+                number : 0
+            }
+        }
+    });
+    app.mount('#app');
+</script>
+</body>
+</html>

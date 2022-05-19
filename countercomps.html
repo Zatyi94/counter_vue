@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <btn_counter_comp></btn_counter_comp>
+    <hr>
+    <btn_counter_comp></btn_counter_comp>
+    <hr>
+    <btn_counter_comp></btn_counter_comp>
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+
+<script type="module">
+    const {createApp} = Vue;
+    // ez a sor addig szürke, amíg nem használom sehol
+    import btn_counter_comp from './counter_button.js';
+
+    const app = createApp({
+       data() {
+           return {
+               message : "Jó éjt!"
+           }
+       },
+        components: {
+           // itt használom először
+            btn_counter_comp
+        }
+    });
+
+    app.mount('#app');
+</script>
+
+</body>
+</html>

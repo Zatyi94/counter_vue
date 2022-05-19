@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- meghívja a csökkentés függvényt -->
+<button onclick="minus('number')">
+    -
+</button>
+<span id="number">
+    0
+</span>
+<!-- meghívja a hozzáadás függvényt -->
+<button onclick="plus('number')">
+    +
+</button>
+
+<hr>
+
+<!-- meghívja a csökkentés függvényt -->
+<button onclick="minus('number2')">
+    -
+</button>
+<span id="number2">
+    0
+</span>
+<!-- meghívja a hozzáadás függvényt -->
+<button onclick="plus('number2')">
+    +
+</button>
+
+<script>
+    function plus(id) {
+        console.log("plus");
+        let number = parseInt(document.getElementById(id).innerText);
+        number++;
+        // console.log(number);
+        document.getElementById(id).innerText = number;
+    }
+    function minus(id) {
+        console.log("minus");
+        let number = parseInt(document.getElementById(id).innerText);
+        number--;
+        // console.log(number);
+        document.getElementById(id).innerText = number;
+    }
+</script>
+</body>
+</html>
